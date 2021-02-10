@@ -15,3 +15,6 @@ This sketch is originated from MAX30100_Minimal.ico, a sample sketch
 in MAX30100lib.
 
 For more information, see https://attosci.com/wordpress/index.php/2020/04/26/m5stackc-pulseoximeter/ (in Japanese).
+
+Changes in this fork:
+Minor change for M5Stick-C Plus

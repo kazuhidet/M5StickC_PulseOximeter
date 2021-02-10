@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* This program is modified to operate with M5StickC and MAX30100 */
 /* by attosci April 26, 2020 */
 
-#include <M5StickC.h>
+#include <M5StickCPlus.h>
 #include <Wire.h>
 #include "MAX30100_PulseOximeter.h"
 
@@ -96,16 +96,18 @@ void loop()
 
         M5.Lcd.fillScreen(BLACK);
 
-        M5.Lcd.setTextSize(2);
+        M5.Lcd.setTextColor(WHITE);
+        M5.Lcd.setTextSize(3);
         M5.Lcd.setCursor(10, 10);
         M5.Lcd.print("SpO2%");
-        M5.Lcd.setCursor(10, 100);
-        M5.Lcd.print("PRbpm");
-        M5.Lcd.setTextSize(5);
-        M5.Lcd.setCursor(15, 40);
-        M5.Lcd.printf("%2d", spo2);
-        M5.Lcd.setTextSize(3);
-        M5.Lcd.setCursor(20, 130);
+        M5.Lcd.setCursor(10, 110);
+        M5.Lcd.print("PRbPm");
+        M5.Lcd.setTextColor(CYAN);
+        M5.Lcd.setTextSize(6);
+        M5.Lcd.setCursor(5, 50);
+        M5.Lcd.printf("%3d", spo2);
+        M5.Lcd.setTextSize(6);
+        M5.Lcd.setCursor(5, 150);
         M5.Lcd.printf("%3.0f", pulse_rate);
         
         tsLastReport = millis();
